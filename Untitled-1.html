@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Earn Castillo — Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{--indigo-1:#4f46e5;--indigo-2:#6366f1}
+    body{box-sizing:border-box}
+    .gradient-indigo{background:linear-gradient(135deg,var(--indigo-1)0%,var(--indigo-2)100%)}
+    .card-hover{transition:transform .28s ease,box-shadow .28s ease}
+    .card-hover:hover{transform:translateY(-6px);box-shadow:0 18px 30px -10px rgba(79,70,229,.18)}
+    .skill-bar{transition:width 1s ease-in-out}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .fade-in-up{animation:fadeInUp .6s ease-out}
+  </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+  <!-- NAV -->
+  <nav class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold bg-gradient-to-br from-indigo-600 to-indigo-400">YC</div>
+          <div class="font-semibold">Earn Eliazar M. Castillo</div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6 text-sm">
+          <a href="#home" class="hover:text-indigo-600">Home</a>
+          <a href="#about" class="hover:text-indigo-600">About</a>
+          <a href="#hobbies" class="hover:text-indigo-600">Hobbies</a>
+          <a href="#favorites" class="hover:text-indigo-600">Favorites</a>
+          <a href="#skills" class="hover:text-indigo-600">Skills</a>
+          <a href="#projects" class="hover:text-indigo-600">Projects</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded hover:bg-gray-100">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <a href="#home" class="block py-2">Home</a>
+        <a href="#about" class="block py-2">About</a>
+        <a href="#hobbies" class="block py-2">Hobbies</a>
+        <a href="#favorites" class="block py-2">Favorites</a>
+        <a href="#skills" class="block py-2">Skills</a>
+        <a href="#projects" class="block py-2">Projects</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="flex flex-col items-center justify-center text-center py-20 bg-gradient-to-b from-indigo-100 to-white">
+<img src="pektur.jpg" alt="Earn Eliazar M. Castillo" class="w-40 h-40 rounded-full border-4 border-indigo-500 shadow-lg mb-6">
+<h2 class="text-4xl font-bold text-indigo-700 mb-2">Earn Eliazar M. Castillo</h2>
+<p class="text-lg text-gray-700">IT Student</p>
+</section>
+
+  <!-- ABOUT / PERSONAL INFO -->
+  <section id="about" class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">About / Personal Info</h2>
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <!-- Left: Info Card -->
+        <div class="bg-indigo-50 rounded-lg p-6 shadow-sm">
+          <h3 class="font-semibold mb-4 text-indigo-700">Personal Info</h3>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li><strong>School:</strong> BatState-U</li>
+            <li><strong>Age:</strong> 19 years old</li>
+            <li><strong>Birthday:</strong> November 28, 2005</li>
+            <li><strong>Address:</strong> Talaga East, Mabini, Batangas</li>
+          </ul>
+
+          <hr class="my-4 border-gray-200" />
+
+          <h3 class="font-semibold mb-3 text-indigo-700">Contact</h3>
+          <div class="text-sm text-gray-700 space-y-2">
+            <div class="flex items-center gap-3"><span class="w-8 h-8 bg-white rounded-full flex items-center justify-center">📧</span><span>yael28castillo@gmail.com</span></div>
+            <div class="flex items-center gap-3"><span class="w-8 h-8 bg-white rounded-full flex items-center justify-center">📱</span><span>09216688406</span></div>
+          </div>
+        </div>
+
+        <!-- Right: About text + badges -->
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-3">Hello — I'm Earn</h3>
+          <p class="text-gray-600 mb-4">I'm an IT student with a passion for building user-focused web experiences. I enjoy learning front-end technologies and improving problem-solving skills through projects and collaborative work.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">HTML</span>
+            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">CSS</span>
+            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">SQL</span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOBBIES -->
+  <section id="hobbies" class="py-12 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <h3 class="text-2xl font-semibold text-center mb-6 text-gray-800">Hobbies & Interests</h3>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+        <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center text-sm card-hover">
+          <div class="text-3xl mb-2">🏀</div>
+          <div>Basketball</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center text-sm card-hover">
+          <div class="text-3xl mb-2">🎵</div>
+          <div>Music</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center text-sm card-hover">
+          <div class="text-3xl mb-2">🏐</div>
+          <div>Volleyball</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center text-sm card-hover">
+          <div class="text-3xl mb-2">📺</div>
+          <div>Series</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center text-sm card-hover">
+          <div class="text-3xl mb-2">📚</div>
+          <div>Reading</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-sm flex flex-col items-center text-sm card-hover">
+          <div class="text-3xl mb-2">🔪</div>
+          <div>Cooking</div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAVORITE FOODS -->
+  <section id="favorites" class="py-12 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h3 class="text-2xl font-semibold text-center mb-6 text-gray-800">Favorite Foods</h3>
+      <div class="flex flex-wrap justify-center gap-4">
+        <div class="bg-amber-50 rounded-lg p-4 min-w-[120px] flex flex-col items-center shadow-sm">
+          <div class="text-3xl mb-2">🍗</div>
+          <div>Chicken</div>
+        </div>
+        <div class="bg-amber-50 rounded-lg p-4 min-w-[120px] flex flex-col items-center shadow-sm">
+          <div class="text-3xl mb-2">🍟</div>
+          <div>Fries</div>
+        </div>
+        <div class="bg-amber-50 rounded-lg p-4 min-w-[120px] flex flex-col items-center shadow-sm">
+          <div class="text-3xl mb-2">☕</div>
+          <div>Coffee</div>
+        </div>
+        <div class="bg-amber-50 rounded-lg p-4 min-w-[120px] flex flex-col items-center shadow-sm">
+          <div class="text-3xl mb-2">🍨</div>
+          <div>Ice Cream</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Skills</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h4 class="font-semibold mb-3">Programming</h4>
+          <p class="text-sm text-gray-600 mb-4">HTML, CSS, JS</p>
+          <div class="text-sm text-gray-600 mb-2 flex justify-between"><span>Frontend</span><span>85%</span></div>
+          <div class="bg-gray-200 rounded-full h-3 mb-2"><div class="h-3 rounded-full skill-bar bg-indigo-600" style="width:85%"></div></div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h4 class="font-semibold mb-3">Math Skills</h4>
+          <p class="text-sm text-gray-600 mb-4">Problem Solving</p>
+          <div class="text-sm text-gray-600 mb-2 flex justify-between"><span>Analytical</span><span>80%</span></div>
+          <div class="bg-gray-200 rounded-full h-3 mb-2"><div class="h-3 rounded-full skill-bar bg-indigo-500" style="width:80%"></div></div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h4 class="font-semibold mb-3">Communication</h4>
+          <p class="text-sm text-gray-600 mb-4">Writing & Speaking</p>
+          <div class="text-sm text-gray-600 mb-2 flex justify-between"><span>Interpersonal</span><span>82%</span></div>
+          <div class="bg-gray-200 rounded-full h-3 mb-2"><div class="h-3 rounded-full skill-bar bg-indigo-400" style="width:82%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Works / Projects</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card template -->
+        <div class="bg-white rounded-lg p-5 shadow-sm card-hover">
+          <div class="text-3xl mb-3">🧾</div>
+          <h4 class="font-semibold mb-1">Personal Portfolio Website</h4>
+          <p class="text-sm text-gray-600 mb-3">Built using HTML and CSS to showcase personal info, skills, and projects.</p>
+        </div>
+
+        <div class="bg-white rounded-lg p-5 shadow-sm card-hover">
+          <div class="text-3xl mb-3">➗</div>
+          <h4 class="font-semibold mb-1">Simple Calculator</h4>
+          <p class="text-sm text-gray-600 mb-3">A JavaScript-based calculator for basic math operations.</p>
+        </div>
+
+        <div class="bg-white rounded-lg p-5 shadow-sm card-hover">
+          <div class="text-3xl mb-3">🌐</div>
+          <h4 class="font-semibold mb-1">Responsive Landing Page</h4>
+          <p class="text-sm text-gray-600 mb-3">Designed a mobile-friendly landing page for a tourist service.</p>
+        </div>
+
+        <div class="bg-white rounded-lg p-5 shadow-sm card-hover">
+          <div class="text-3xl mb-3">🔔</div>
+          <h4 class="font-semibold mb-1">HELMSify — Desktop Notifier</h4>
+          <p class="text-sm text-gray-600 mb-3">A Python-based desktop notification script using Plyer, developed as a portfolio project.</p>
+        </div>
+
+        <div class="bg-white rounded-lg p-5 shadow-sm card-hover">
+          <div class="text-3xl mb-3">🏨</div>
+          <h4 class="font-semibold mb-1">VEELATSALVANIA — Hostel Management</h4>
+          <p class="text-sm text-gray-600 mb-3">Simple hostel management system for room assignments, student records, and payments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t py-8">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-gray-600">Ready to connect and collaborate!</p>
+      <div class="mt-4 flex justify-center gap-4">
+        <a href="mailto:yael28castillo@gmail.com" class="text-sm text-indigo-600">yael28castillo@gmail.com</a>
+        <span class="text-sm">•</span>
+        <a href="tel:09216688406" class="text-sm text-indigo-600">09216688406</a>
+      </div>
+      <p class="mt-6 text-sm text-gray-400">&copy; 2025 Earn Castillo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        const t = document.querySelector(this.getAttribute('href'));
+        if(t) t.scrollIntoView({behavior:'smooth', block:'start'});
+        if(!mobileMenu.classList.contains('hidden')) mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Contact form submit simulation
+    document.getElementById('contact-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending...'; btn.disabled = true;
+      setTimeout(()=>{ alert('Thanks! Message sent.'); btn.textContent = 'Send Message'; btn.disabled = false; this.reset(); },1200);
+    });
+
+    // Animate skill bars when skills section in view
+    const skillsSection = document.getElementById('skills');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.querySelectorAll('.skill-bar').forEach(b=>{
+            const w = b.getAttribute('style') || 'width:0%';
+            b.style.width = w.replace('width:','');
+          });
+        }
+      });
+    },{threshold:.5});
+    if(skillsSection) io.observe(skillsSection);
+  </script>
+</body>
+</html>
